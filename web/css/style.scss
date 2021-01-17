@@ -1,0 +1,105 @@
+$screen-size-xs: " (max-width: 767px) ";
+$screen-size-sm: " (min-width: 768px) and (max-width: 992px) ";
+$screen-size-md: " (min-width: 993px) and (max-width: 1185px) ";
+$screen-size-lg: " (min-width: 1186px) ";
+
+*{
+    font-family: 'Quicksand', sans-serif;
+}
+
+body{
+    text-align: center;
+    min-height: 100vh;
+}
+
+a{
+    text-decoration: none;
+}
+
+.main-logo{
+    margin: 0px 0px 50px 0px;
+    hr{
+        border: 1px solid rgba(226, 226, 226, 0.23);
+    }
+    img{
+        padding: 10px 20px;
+        @media #{$screen-size-xs}{
+            max-width: 200px;
+        } 
+    }
+}
+
+.container{
+    min-height: 78vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cover-heading{
+    margin: 0px;
+    @media #{$screen-size-xs}{
+        font-size: 22pt;
+    } 
+}
+
+.products-section{
+    hr{
+        margin: 40px 38%;
+        border: 2px solid #3d3d3d;
+        border-radius: 5px;
+        @media #{$screen-size-xs}{
+            margin: 20px 28% 20px 28%;
+            border: 2px solid #3d3d3d;
+            border-radius: 5px;
+        } 
+    }
+}
+
+.products{
+    margin: 50px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.product{ 
+    cursor: default;
+    width: 360px;
+    padding: 20px;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.05);
+    border: 1px solid rgba(211,211,211,0.36);
+    background: white;
+    border-radius: 0px;
+    &:hover{
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.10);
+    }
+    .product-tagline{
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+    .product-logo{
+        width: 250px;
+    }
+    .product-details{
+        margin: 20px;
+    }
+    .product-actions{
+        a{
+            outline: none;
+            &:hover{
+                box-shadow: none;
+            }
+            &:focus{
+                box-shadow: none;
+            }
+            &:active{
+                box-shadow: none;
+            }
+        }
+    }
+}
+ 
+.mastfoot{
+    margin: 50px 50px 20px 50px;
+}
